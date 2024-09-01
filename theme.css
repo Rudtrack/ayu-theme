@@ -1,393 +1,254 @@
-/* Dark theme */
-.theme-dark {
-  --background-primary: #272b34;
-  --background-primary-alt: #20242b;
-  --background-secondary: #20242b;
-  --background-secondary-alt: #1a1e24;
-  --background-accent: #000;
-  --background-modifier-border: #424958;
-  --background-modifier-form-field: rgba(0, 0, 0, 0.3);
-  --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22);
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
-  --background-modifier-success: #539126;
-  --background-modifier-error: #3d0000;
-  --background-modifier-error-rgb: 61, 0, 0;
-  --background-modifier-error-hover: #470000;
-  --background-modifier-cover: rgba(0, 0, 0, 0.6);
-  --text-accent: #61afef;
-  --text-accent-hover: #70bdfc;
-  --text-normal: #dcddde;
-  --text-muted: #888;
-  --text-faint: rgb(81, 86, 99);
-  --text-error: #e16d76;
-  --text-error-hover: #c9626a;
-  --text-highlight-bg: rgba(255, 255, 0, 0.4);
-  --text-selection: rgba(0, 122, 255, 0.2);
-  --text-on-accent: #dcddde;
-  --interactive-normal: #20242b;
-  --interactive-hover: #353b47;
-  --interactive-accent-hover: hsl(var(--accent-h), calc(var(--accent-s) + 5%), calc(var(--accent-l) - 10%));
-  --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2);
-  --scrollbar-bg: rgba(255, 255, 255, 0.05);
-  --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
-}
-
-/* Light theme */
 .theme-light {
-  --accent-h: 230;
-  --accent-s: 83%;
-  --accent-l: 64%;
-  
   --background-primary: #f8f9fa;
-  --background-primary-alt: #f3f4f5;
   --background-secondary: #f3f4f5;
-  --background-secondary-alt: #f3f4f5;
-  --background-accent: #fff;
-  --background-modifier-border: #dbdbdc;
-  --background-modifier-form-field: #fff;
-  --background-modifier-form-field-highlighted: #fff;
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
-  --background-modifier-success: #A4E7C3;
-  --background-modifier-error: #e68787;
-  --background-modifier-error-rgb: 230, 135, 135;
-  --background-modifier-error-hover: #FF9494;
-  --background-modifier-cover: rgba(0, 0, 0, 0.8);
-  --text-accent: #1592ff;
-  --text-accent-hover: #097add;
+  --background-secondary-alt: #f0f1f2;
   --text-normal: #5c6166;
-  --text-muted: #8e8e90;
-  --text-faint: #999999;
+  --text-muted: #8a9199;
+  --text-faint: #acb6bf;
   --text-error: #e65050;
-  --text-error-hover: #f86959;
-  --text-highlight-bg: rgba(255, 255, 0, 0.4);
-  --text-selection: rgba(0, 122, 255, 0.15);
-  --text-on-accent: #f2f2f2;
-  --interactive-normal: #eaeaeb;
-  --interactive-hover: #dbdbdc;
-  --interactive-accent-rgb: 21, 146, 255;
-  --interactive-accent-hover: hsl(var(--accent-h), calc(var(--accent-s) - 10%), calc(var(--accent-l) - 4%));
-  --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
-  --scrollbar-bg: rgba(0, 0, 0, 0.05);
-  --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
-  --panel-border-color: #dbdbdc;
+  --text-accent: #ffaa33;
+  --header-color: #ffaa33;
+  --interactive-normal: #fcfcfc;
+  --interactive-hover: #f9a52e;
+  --interactive-accent: #ffaa33;
+  --interactive-accent-rgb: 255, 170, 51;
+  --backlink-color: #86b300;
+  --backlink-hover-color: #aad94c;
+  --link-out-color: #86b300;
+  --link-out-hover-color: #aad94c;
+  --scrollbar-active-thumb-bg: #8a9199b3;
+  --nav-entry-color: #5c6166;
+  --nav-entry-color-active: #5c6166;
+  --nav-arrow-icon-color: #5c6166;
+  --highlight-bg: #035bd626;
+  --code-normal: #5c6166;
+  --code-background: #f3f4f5;
+  --code-comment: #787b8099;
+  --code-string: #86b300;
+  --code-number: #a37acc;
+  --code-keyword: #fa8d3e;
+  --code-operator: #ed9366;
+  --code-function: #f2ae49;
+  --code-variable: #5c6166;
+  --code-constant: #a37acc;
+  --code-type: #399ee6;
+  --code-tag: #55b4d4;
+  --code-attribute: #f2ae49;
 }
 
-/* Common styles for both themes */
-.theme-dark,
-.theme-light {
-  --accent-h: 219;
-  --accent-s: 56%;
-  --accent-l: 55%;
-  
-  /* Common variables */
-  --panel-border-color: #18191e;
-  --background-modifier-hover: hsla(var(--accent-h), calc(var(--accent-s) - 35%), var(--accent-l), 0.06);
-  --divider-color-hover: #404754;
-  
-  /* Shared theme properties */
-  --ribbon-background: var(--background-primary);
-  --drag-ghost-background: var(--background-secondary-alt);
-  --background-modifier-message: var(--background-secondary-alt);
-  --tab-outline-color: transparent;
-  --divider-color: transparent;
-  --prompt-border-color: var(--panel-border-color);
-  --modal-border-color: var(--panel-border-color);
-  --background-modifier-border-hover: var(--interactive-hover);
-  --background-modifier-border-focus: var(--interactive-hover);
-  --checkbox-color: var(--text-accent);
-  --checkbox-color-hover: var(--text-accent-hover);
+.theme-dark {
+  --background-primary: #0b0e14;
+  --background-secondary: #0f131a;
+  --background-secondary-alt: #11151c;
+  --text-normal: #bfbdb6;
+  --text-muted: #565b66;
+  --text-faint: #6c7380;
+  --text-error: #d95757;
+  --text-accent: #e6b450;
+  --header-color: #ffaa33;
+  --interactive-normal: #0d1017;
+  --interactive-hover: #e1af4b;
+  --interactive-accent: #e6b450;
+  --interactive-accent-rgb: 230, 180, 80;
+  --backlink-color: #86b300;
+  --backlink-hover-color: #aad94c;
+  --link-out-color: #86b300;
+  --link-out-hover-color: #aad94c;
+  --scrollbar-active-thumb-bg: #565b66b3;
+  --nav-entry-color: #bfbdb6;
+  --nav-entry-color-active: #11151c;
+  --nav-arrow-icon-color: #5c6166;
+  --highlight-bg: #409fff4d;
+  --code-normal: #bfbdb6;
+  --code-background: #0f131a;
+  --code-comment: #acb6bf8c;
+  --code-string: #aad94c;
+  --code-number: #d2a6ff;
+  --code-keyword: #ff8f40;
+  --code-operator: #f29668;
+  --code-function: #ffb454;
+  --code-variable: #bfbdb6;
+  --code-constant: #d2a6ff;
+  --code-type: #59c2ff;
+  --code-tag: #39bae6;
+  --code-attribute: #ffb454;
+}
+
+.theme-light,
+.theme-dark {
   --nav-item-background-active: var(--interactive-accent);
-  --nav-item-color-active: #ffffff;
+  --font-text: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-monospace: "Source Code Pro", monospace;
+  --h1-color: var(--header-color);
+  --h3-color: var(--header-color);
+  --h2-color: var(--header-color);
+  --h4-color: var(--header-color);
+  --h5-color: var(--header-color);
+  --h6-color: var(--header-color);
+  --link-color: var(--backlink-color);
+  --link-color-hover: var(--backlink-hover-color);
+  --link-external-color: var(--link-out-color);
+  --link-external-color-hover: var(--link-out-hover-color);
+  --tag-color: var(--text-accent);
+  --tag-background: var(--background-secondary-alt);
+  --nav-item-color: var(--nav-entry-color);
+  --nav-item-color-active: var(--nav-entry-color-active);
+  --nav-collapsed-icon-color: var(--nav-arrow-icon-color);
+  --quote-color: var(--text-normal);
+  --quote-border: var(--interactive-accent);
   --tag-color: var(--code-keyword);
-  --tag-background: var(--background-primary-alt);
+  --tag-background: var(--background-secondary);
   --tag-color-hover: var(--yellow);
-  --tag-background-hover: var(--background-primary-alt);
+  --tag-background-hover: var(--background-secondary-alt);
   --tag-padding-x: 4px;
   --tag-padding-y: 2px;
   --tag-radius: 4px;
-  --inline-title-weight: var(--bold-weight);
-  --link-decoration: none;
-  --link-external-decoration: none;
-  --link-color: #ed9366;
-  --link-external-color: #ed9366;
-  --embed-padding: 0 0 0 var(--size-4-4);
-
-  --h1-color: #86b300;
-  --h2-color: #86b300;
-  --h3-color: #86b300;
-  --h4-color: #86b300;
-  --h5-color: #86b300;
-  --h6-color: #86b300;
 }
 
-/* Code syntax highlighting */
-.theme-light {
-  --metadata-label-text-color: #399EE6;
-  --code-background: #8a91994d;
-  --code-normal: #404754;
-  --code-comment: #787b8099;
-  --code-function: #F2AE49;
-  --code-important: #4cbf99;
-  --code-keyword: #fa8d3e;
-  --code-operator: #ed9366;
-  --code-property: #55b4d4;
-  --code-punctuation: #5c6166;
-  --code-string: #86b300;
-  --code-tag: #55b4d480;
-  --code-class-name: #55b4d4;
-  --code-value: #404754;
+body {
+  font-family: var(--font-text);
 }
 
-/* Search styles */
-.search-result .search-result-file-title {
-  cursor: pointer;
+.markdown-preview-view code,
+.cm-s-obsidian span.cm-inline-code {
+  color: var(--code-normal);
+  background-color: var(--code-background);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
 }
 
-.search-result .collapse-icon {
-  cursor: var(--cursor);
+.markdown-preview-view blockquote {
+  border-left: 4px solid var(--quote-border);
+  background-color: var(--background-secondary);
+  padding: 1em;
+  margin: 1em 0;
 }
 
-.search-result:not(.is-collapsed) .search-result-file-title {
-  color: var(--blue);
-}
-
-/* File tab separators */
-.workspace .mod-root .workspace-tab-header-inner::after {
-  right: unset;
-  left: -0.5px;
-}
-
-.workspace .mod-root .workspace-tab-header:last-child .workspace-tab-header-inner::before {
-  position: absolute;
-  right: -0.5px;
-  width: 1px;
-  background-color: var(--tab-divider-color);
-  content: '';
-  height: 20px;
-}
-
-.workspace .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner::after,
-.workspace .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner::before,
-.workspace .mod-root .workspace-tab-header:first-child .workspace-tab-header-inner::after,
-.workspace .mod-root .workspace-tab-header.is-active + .workspace-tab-header .workspace-tab-header-inner::after {
-  opacity: 0;
-}
-
-/* Editor and output styles */
-.markdown-rendered blockquote {
-  padding: var(--embed-padding);
-}
-
-mjx-container {
-  text-align: left !important;
-}
-
-.math-block {
-  font-size: 1.3em;
-}
-
-.theme-light :not(pre) > code,
-.theme-light pre {
-  background: var(--background-primary);
-  box-shadow: inset 0 0 0 1px var(--background-primary-alt);
+/* Markdown preview code block styles */
+.markdown-preview-view pre[class*="language-"] {
+  background-color: var(--code-background);
+  padding: 1em;
   border-radius: 4px;
 }
 
-.markdown-preview-section > div h1,
-.markdown-preview-section > div h2,
-.markdown-preview-section > div h3,
-.markdown-preview-section > div h4,
-.markdown-preview-section > div h5,
-.markdown-preview-section > div h6 {
-  margin-top: 40px;
+.markdown-preview-view code[class*="language-"] {
+  color: var(--text-normal);
 }
 
-.mod-header + div h1,
-.mod-header + div h2,
-.mod-header + div h3,
-.mod-header + div h4,
-.mod-header + div h5,
-.mod-header + div h6 {
-  margin-top: 30px;
+.markdown-preview-view .token.comment {
+  color: var(--code-comment);
+  font-style: italic;
 }
 
-.cm-sizer > .inline-title {
-  margin-bottom: 20px;
+.markdown-preview-view .token.string {
+  color: var(--code-string);
 }
 
-/* Miscellaneous styles */
-.theme-dark .dropdown:hover {
-  background-color: var(--background-modifier-form-field);
+.markdown-preview-view .token.number {
+  color: var(--code-number);
 }
 
-.tooltip {
+.markdown-preview-view .token.keyword {
+  color: var(--code-keyword);
+}
+
+.markdown-preview-view .token.operator {
+  color: var(--code-operator);
+}
+
+.markdown-preview-view .token.function {
+  color: var(--code-function);
+}
+
+.markdown-preview-view .token.variable {
+  color: var(--code-variable);
+}
+
+.markdown-preview-view .token.constant {
+  color: var(--code-constant);
+}
+
+.markdown-preview-view .token.class-name {
+  color: var(--code-type);
+}
+
+.markdown-preview-view .token.tag {
+  color: var(--code-tag);
+}
+
+.markdown-preview-view .token.attr-name {
+  color: var(--code-attribute);
+}
+
+.tag {
+  background-color: var(--tag-background);
+  color: var(--tag-color);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.nav-file-title,
+.nav-folder-title {
   color: var(--text-muted);
 }
 
-.nav-file,
-.nav-folder {
-  padding: 1px 2px;
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  color: var(--text-accent);
 }
 
-body:not(.is-grabbing) .nav-file-title.is-being-dragged,
-body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
-.nav-file-title.is-being-dragged,
-.nav-folder-title.is-being-dragged {
-  background-color: var(--background-primary-alt);
-  color: var(--nav-item-color);
+.cm-s-obsidian .CodeMirror-gutters {
+  background-color: var(--background-secondary);
 }
 
-.view-header-title {
-  text-decoration: underline;
-  text-decoration-color: var(--text-muted);
-  text-underline-offset: 1.5px;
+.cm-s-obsidian .CodeMirror-linenumber {
+  color: var(--text-faint);
 }
 
-.status-bar {
-  border-color: var(--panel-border-color);
-  border-width: 1px;
-  padding: 4px 8px;
+/* Code block styles */
+.cm-s-obsidian span.cm-comment {
+  color: var(--code-comment);
+  font-style: italic;
 }
 
-.theme-dark button.mod-warning {
-  --background-modifier-error: #d42020;
-  --background-modifier-error-hover: #b01515;
+.cm-s-obsidian span.cm-string {
+  color: var(--code-string);
 }
 
-.theme-light button.mod-warning {
-  --background-modifier-error: #f23f3f;
-  --background-modifier-error-hover: #d72020;
+.cm-s-obsidian span.cm-number {
+  color: var(--code-number);
 }
 
-/* Code syntax highlighting styles */
-code[class*='language-'],
-pre[class*='language-'] {
-  text-align: left !important;
-  white-space: pre !important;
-  word-spacing: normal !important;
-  word-break: normal !important;
-  word-wrap: normal !important;
-  line-height: 1.5 !important;
-  tab-size: 4 !important;
-  hyphens: none !important;
+.cm-s-obsidian span.cm-keyword {
+  color: var(--code-keyword);
 }
 
-pre[class*='language-'] {
-  padding: 1em !important;
-  margin: 0.5em 0 !important;
-  overflow: auto !important;
+.cm-s-obsidian span.cm-operator {
+  color: var(--code-operator);
 }
 
-:not(pre) > code[class*='language-'] {
-  padding: 0.1em !important;
-  border-radius: 0.3em !important;
-  white-space: normal !important;
+.cm-s-obsidian span.cm-def,
+.cm-s-obsidian span.cm-variable-2,
+.cm-s-obsidian span.cm-variable-3 {
+  color: var(--code-function);
 }
 
-.notice {
-  color: var(--text-accent) !important;
+.cm-s-obsidian span.cm-variable {
+  color: var(--code-variable);
 }
 
-/* Token styles */
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata,
-.HyperMD-codeblock .cm-comment {
-  color: var(--code-comment) !important;
+.cm-s-obsidian span.cm-atom {
+  color: var(--code-constant);
 }
 
-.token.punctuation,
-.HyperMD-codeblock .cm-hmd-codeblock,
-.HyperMD-codeblock .cm-bracket {
-  color: var(--code-punctuation) !important;
+.cm-s-obsidian span.cm-type {
+  color: var(--code-type);
 }
 
-.token.type,
-.HyperMD-codeblock .cm-type {
-    color: var(--code-function) !important;
+.cm-s-obsidian span.cm-tag {
+  color: var(--code-tag);
 }
 
-.token.selector,
-.token.tag,
-.HyperMD-codeblock .cm-tag,
-.HyperMD-codeblock .cm-property,
-.HyperMD-codeblock .cm-meta,
-.HyperMD-codeblock .cm-qualifier,
-.HyperMD-codeblock .cm-header,
-.HyperMD-codeblock .cm-quote,
-.HyperMD-codeblock .cm-hr,
-.HyperMD-codeblock .cm-link {
-  color: var(--code-normal) !important;
-}
-
-.token.property,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.attr-name,
-.token.deleted,
-.HyperMD-codeblock .cm-number,
-.HyperMD-codeblock .cm-atom,
-.HyperMD-codeblock .cm-attribute {
-  color: var(--code-property) !important;
-}
-
-.token.string,
-.token.char,
-.token.attr-value,
-.token.builtin,
-.token.inserted,
-.HyperMD-codeblock .cm-string,
-.HyperMD-codeblock .cm-builtin {
-  color: var(--code-string) !important;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.HyperMD-codeblock .cm-string-2,
-.HyperMD-codeblock .cm-operator {
-  color: var(--code-operator) !important;
-}
-
-.token.atrule,
-.token.keyword,
-.HyperMD-codeblock .cm-keyword {
-  color: var(--code-keyword) !important;
-}
-
-.token.function,
-.token.macro.property,
-.HyperMD-codeblock .cm-def,
-.HyperMD-codeblock .cm-variable {
-  color: var(--code-normal) !important;
-}
-
-.token.class-name,
-.HyperMD-codeblock .cm-variable-2,
-.HyperMD-codeblock .cm-variable-3 {
-  color: var(--code-class-name) !important;
-}
-
-.token.regex,
-.token.important,
-.token.variable {
-  color: var(--code-important) !important;
-}
-
-.token.important,
-.token.bold {
-  font-weight: bold !important;
-}
-
-.token.italic {
-  font-style: italic !important;
-}
-
-.token.entity {
-  cursor: help !important;
+.cm-s-obsidian span.cm-attribute {
+  color: var(--code-attribute);
 }
