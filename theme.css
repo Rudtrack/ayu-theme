@@ -16,6 +16,7 @@
   --backlink-hover-color: #aad94c;
   --link-out-color: #86b300;
   --link-out-hover-color: #aad94c;
+  --link-decoration: none;
   --scrollbar-active-thumb-bg: #8a9199b3;
   --nav-entry-color: #5c6166;
   --nav-entry-color-active: #3a3b3b;
@@ -54,6 +55,7 @@
   --backlink-hover-color: #aad94c;
   --link-out-color: #86b300;
   --link-out-hover-color: #aad94c;
+  --link-decoration: none;
   --scrollbar-active-thumb-bg: #565b66b3;
   --nav-entry-color: #bfbdb6;
   --nav-entry-color-active: #11151c;
@@ -94,6 +96,8 @@
   --nav-item-color: var(--nav-entry-color);
   --nav-item-color-active: var(--nav-entry-color-active);
   --nav-collapsed-icon-color: var(--nav-arrow-icon-color);
+  --dropdown-background: var(--background-secondary);
+  --dropdown-bacground-hover: var(--background-secondary-alt);
   --quote-color: var(--text-normal);
   --quote-border: var(--interactive-accent);
   --tag-color: var(--code-keyword);
