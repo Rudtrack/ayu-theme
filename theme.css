@@ -19,7 +19,7 @@
   --link-decoration: none;
   --scrollbar-active-thumb-bg: #8a9199b3;
   --nav-entry-color: #5c6166;
-  --nav-entry-color-active: #3a3b3b;
+  --nav-entry-color-active: #000000;
   --nav-arrow-icon-color: #5c6166;
   --highlight-bg: #035bd626;
   --code-normal: #5c6166;
@@ -58,7 +58,7 @@
   --link-decoration: none;
   --scrollbar-active-thumb-bg: #565b66b3;
   --nav-entry-color: #bfbdb6;
-  --nav-entry-color-active: #11151c;
+  --nav-entry-color-active: #ffffff;
   --nav-arrow-icon-color: #5c6166;
   --highlight-bg: #409fff4d;
   --code-normal: #bfbdb6;
@@ -198,7 +198,7 @@ body {
 
 .nav-file-title.is-active,
 .nav-folder-title.is-active {
-  color: var(--text-accent);
+  color: var(--nav-item-color-active);
 }
 
 .cm-s-obsidian .CodeMirror-gutters {
