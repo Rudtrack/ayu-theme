@@ -38,10 +38,10 @@
 }
 
 .theme-dark {
-  --background-primary: #0b0e14;
-  --background-secondary: #0f131a;
-  --background-secondary-alt: #11151c;
-  --text-normal: #bfbdb6;
+  --background-primary: #1f2430;
+  --background-secondary: #1f2430;
+  --background-secondary-alt: #1f2430;
+  --text-normal: #cccac2;
   --text-muted: #565b66;
   --text-faint: #6c7380;
   --text-error: #d95757;
@@ -58,10 +58,10 @@
   --link-decoration: none;
   --scrollbar-active-thumb-bg: #565b66b3;
   --nav-entry-color: #bfbdb6;
-  --nav-entry-color-active: #ffffff;
+  --nav-entry-color-active: #000000;
   --nav-arrow-icon-color: #5c6166;
   --highlight-bg: #409fff4d;
-  --code-normal: #bfbdb6;
+  --code-normal: #cccac2;
   --code-background: #0f131a;
   --code-comment: #acb6bf8c;
   --code-string: #aad94c;

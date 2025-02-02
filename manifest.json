@@ -1,6 +1,10 @@
 {
-    "name": "Ayu",
-    "version": "0.0.2",
-    "minAppVersion": "0.16.0",
-    "author": "Rudtrack"
+    "id": "ayu-theme",
+    "name": "Ayu Theme",
+    "version": "1.0.0",
+    "minAppVersion": "1.1.0",
+    "author": "Marius Svarverud",
+    "authorUrl": "https://github.com/Rudtrack",
+    "fundingUrl": "https://github.com/sponsors/Rudtrack",
+    "isDesktopOnly": false
 }
